@@ -1,0 +1,44 @@
+SCP — SISTEMA DE CONTAS A PAGAR — VERSÃO 1.1 (PROTÓTIPO)
+
+REQUISITOS
+- Windows 10/11
+- Python 3.10 ou superior
+- Acesso à internet na primeira instalação para baixar Flask e dependências (ou pacotes previamente instalados)
+
+COMO INICIAR NO WINDOWS
+1. Extraia a pasta SCP_Sistema_v1.
+2. Abra a pasta e dê duplo clique em INICIAR.bat.
+3. Aguarde a instalação das dependências na primeira execução.
+4. Quando aparecer “SCP disponível em http://127.0.0.1:5000”, abra esse endereço no navegador.
+5. Para encerrar, volte à janela preta e pressione Ctrl+C.
+
+USUÁRIOS DE DEMONSTRAÇÃO
+Administrador: admin / Admin@SCP2026!
+Solicitante: solicitante / Solicita@SCP2026!
+Aprovador: aprovador / Aprova@SCP2026!
+Financeiro: financeiro / Paga@SCP2026!
+
+NOVIDADES DA V1.1
+1. Alerta de possível duplicidade por documento/referência e por fornecedor/valor/vencimento.
+2. Confirmação explícita do aprovador quando há possível duplicidade.
+3. Linha do tempo com cadastro, decisão, pagamento e cancelamento.
+4. Painel com vencidos, vencimentos em até 7 dias e aprovados ainda não pagos.
+
+FLUXO DE TESTE
+1. Entre como solicitante e cadastre contas fictícias.
+2. Cadastre uma segunda conta com o mesmo fornecedor/documento/referência para testar o alerta.
+3. Entre como aprovador, confira os registros relacionados e teste a confirmação antes de aprovar.
+4. Entre como financeiro e registre o pagamento de uma conta aprovada (o pagamento ocorre fora do SCP).
+5. Abra os detalhes da despesa para conferir a linha do tempo.
+6. Consulte o painel para verificar os alertas de vencimento.
+
+ATUALIZAÇÃO SEM PERDER DADOS
+Antes de substituir a versão, feche o SCP e faça uma cópia do arquivo scp.db da pasta antiga. Para manter os dados, copie esse arquivo para a pasta nova SCP_Sistema_v1. Para começar do zero, não copie o banco.
+
+LIMITAÇÕES IMPORTANTES
+- Protótipo acadêmico local; não publicar diretamente na internet.
+- Use somente dados fictícios.
+- A confirmação de pagamento apenas registra pagamento já realizado fora do SCP.
+- Alertas de duplicidade são indícios e exigem conferência humana.
+- Regras de alçada, múltiplas aprovações, notificações e restauração ainda precisam de decisão/validação da equipe.
+- O arquivo scp.db contém os dados. A auditoria não é inviolável contra acesso direto ao computador ou ao banco.
